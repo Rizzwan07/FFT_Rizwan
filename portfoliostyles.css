@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #FAF9F6;
     color: #292524;
@@ -14,29 +18,39 @@ h1 {
     text-align: center;
     font-size: 36px;
     padding: 30px;
+    margin-top: 60px;
 }
 
 .navbar {
     background-color: #F1EFE9;
     padding: 18px;
-    ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-ul {
+.navbar ul {
     display: flex;
     justify-content: center;
     gap: 40px;
     list-style: none;
 }
 
-li {
+.navbar li {
     font-size: 16px;
     color: #57534E;
 }
-    
+
+.navbar a {
+    color: #57534E;
+    text-decoration: none;
+}
+
 .home {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -46,7 +60,8 @@ li {
 
 .about {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -56,7 +71,8 @@ li {
 
 .skills {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -66,7 +82,8 @@ li {
 
 .qualifications {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -76,12 +93,46 @@ li {
 
 .projects {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
     background-color: #FFFDF8;
+}
+
+.experience {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #FAF9F6;
+}
+
+.achievements {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #FFFDF8;
+}
+
+.activities {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #FAF9F6;
 }
 
 h2 {
@@ -102,16 +153,31 @@ h2 {
     color: #78716C;
 }
 
-/* About */
-#about {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #FAF9F6;
-}
-
 #about p {
     max-width: 650px;
     margin: auto;
     line-height: 1.7;
     color: #78716C;
+}
+
+#skills ul,
+#qualifications ul,
+#projects ul,
+#experience ul,
+#achievements ul,
+#activities ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+#skills li,
+#qualifications li,
+#projects li,
+#experience li,
+#achievements li,
+#activities li {
+    font-size: 16px;
+    color: #57534E;
 }
