@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rizwan Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            background: #FAF9F6;
+            color: #292524;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px;
+            margin-top: 90px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            background: #F1EFE9;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #57534E;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #292524;
+        }
+
+        .home {
+            background: #FFFDF8;
+            text-align: center;
+            padding: 60px 20px;
+            animation: entry 1s ease;
+        }
+
+        @keyframes entry {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about {
+            background: #FAF9F6;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .skills {
+            background: #FFFDF8;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .qualifications {
+            background: #FAF9F6;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .projects {
+            background: #FFFDF8;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .experience {
+            background: #FAF9F6;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .achievements {
+            background: #FFFDF8;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .activities {
+            background: #FAF9F6;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact {
+            background: #FAF9F6;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .home p {
+            color: #78716C;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .about p {
+            color: #78716C;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        #p1 {
+            font-size: 24px;
+            color: #57534E;
+            margin: 15px 0;
+        }
+
+        .skills ul {
+            list-style: none;
+            max-width: 700px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .skills li {
+            padding: 8px;
+            color: #57534E;
+            transition: 0.3s;
+        }
+
+        .skills li:hover {
+            color: #292524;
+        }
+
+        .qualifications ul {
+            list-style: none;
+            max-width: 800px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .qualifications li {
+            padding: 8px;
+            color: #57534E;
+        }
+
+        .experience ul {
+            list-style: none;
+            max-width: 800px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .experience li {
+            padding: 8px;
+            color: #57534E;
+            transition: 0.3s;
+        }
+
+        .experience li:hover {
+            color: #292524;
+        }
+
+        .achievements ul {
+            list-style: none;
+            max-width: 900px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .achievements li {
+            padding: 8px;
+            color: #57534E;
+        }
+
+        .activities ul {
+            list-style: none;
+            max-width: 800px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .activities li {
+            padding: 8px;
+            color: #57534E;
+        }
+
+        .projects ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .projects li {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .projects:hover {
+            box-shadow: inset 0 0 0 1px #e7e5e4;
+        }
+
+        .projects h3 {
+            color: #2F478C;
+            margin-bottom: 10px;
+        }
+
+        .projects p {
+            color: #57534E;
+            margin: 0;
+        }
+
+        .contact form {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .contact input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #d6d3d1;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #d6d3d1;
+            border-radius: 8px;
+            box-sizing: border-box;
+            height: 120px;
+        }
+
+        .contact button {
+            width: 100%;
+            background: #2F478C;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact button:hover {
+            background: #1E326B;
+        }
+
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .projects ul {
+                grid-template-columns: 1fr;
+            }
+
+            .contact form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <h1>SK Rizwan's Portfolio</h1>
+
+    <div class="home" id="home">
+        <h2>Home</h2>
+        <p id="p1">Hello! I'm Rizwan.</p>
+        <p>
+            I am an MCA student at Alliance University, Bengaluru,
+            with a strong interest in Generative AI, Machine Learning,
+            NLP, RAG, LLMs, Robotics and IoT.
+            I enjoy building practical solutions using emerging technologies.
+        </p>
+    </div>
+
+    <div class="about" id="about">
+        <h2>About</h2>
+        <p>
+            I am currently pursuing my Master of Computer Applications (MCA)
+            at Alliance University, Bengaluru. I completed my Bachelor of
+            Computer Applications (BCA) from Birla Global University,
+            Bhubaneswar.
+            My interests include Generative AI, Machine Learning, NLP,
+            RAG, LLMs, Robotics, IoT, and AI-powered application development.
+        </p>
+    </div>
+
+    <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Machine Learning</li>
+            <li>NLP</li>
+            <li>LLMs</li>
+            <li>Prompt Engineering</li>
+            <li>IoT & Embedded Systems</li>
+            <li>CAD Designing (Fusion 360)</li>
+        </ul>
+    </div>
+
+    <div class="qualifications" id="qualifications">
+        <h2>Qualifications</h2>
+        <ul>
+            <li>Master of Computer Applications (MCA) - Alliance University, Bengaluru</li>
+            <li>Bachelor of Computer Applications (BCA) - Birla Global University, Bhubaneswar</li>
+        </ul>
+    </div>
+
+    <div class="projects" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>CADGen</h3>
+                <p>AI-powered Text-to-3D CAD Generator.</p>
+            </li>
+            <li>
+                <h3>NLP2SQL</h3>
+                <p>Text-to-SQL AI Assistant using Natural Language.</p>
+            </li>
+            <li>
+                <h3>ROSBot</h3>
+                <p>Autonomous mobile robot using ROS2.</p>
+            </li>
+            <li>
+                <h3>Next Gen Parking</h3>
+                <p>IoT-based smart parking system.</p>
+            </li>
+            <li>
+                <h3>Summarizer-AI</h3>
+                <p>Multi-document question answering assistant.</p>
+            </li>
+            <li>
+                <h3>Smart Home</h3>
+                <p>Connected automation system using sensors.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="experience" id="experience">
+        <h2>Internship Experience</h2>
+        <ul>
+            <li>Eldridge Morgan Pvt. Ltd. - Full Stack Intern</li>
+            <li>FXUAV Technologies - SDR Intern</li>
+            <li>SPK-MAK Technologies - CAD Design Intern</li>
+            <li>SPK-MAK Technologies - Machine Learning Intern</li>
+            <li>SPK-MAK Technologies - Data Analyst Intern</li>
+        </ul>
+    </div>
+
+    <div class="achievements" id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+            <li>2nd Runner-up, AGENTS FOR ACADEMIA Innovation Event - BGU (2026)</li>
+            <li>Runner-up, Science Exhibition - Youth Festival, Puri (2025)</li>
+            <li>Finalist, GEHU National-Level Hackathon (2025)</li>
+            <li>Runner-up, Hackathon - BGU (2024)</li>
+            <li>2nd Runner-up, Elevator Pitch Contest - BGU (2024)</li>
+            <li>Finalist, CraftNCode Hackathon - IIIT Bhubaneswar (2024)</li>
+            <li>Runner-up, BGU Tech Hackathon (2023)</li>
+        </ul>
+    </div>
+
+    <div class="activities" id="activities">
+        <h2>Extracurricular Activities</h2>
+        <ul>
+            <li>Founder and President of BGUBots, official Robotics Club of BGU.</li>
+            <li>Organized RoboMania, an inter-university robotics event at Spectra 2026.</li>
+            <li>Conducted robotics workshops and mentored students in Robotics and IoT.</li>
+        </ul>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="email" placeholder="Enter Your Email">
+            <textarea placeholder="Enter Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

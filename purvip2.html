@@ -1,0 +1,264 @@
+<html>
+<head>
+    <title>Semantic Department</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: brown;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0px;
+        }
+
+        nav li {
+            color: white;
+            list-style-type: none;
+        }
+
+        nav li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav li a:hover {
+            color: yellow;
+        }
+
+        section {
+            text-align: center;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: brown;
+        }
+
+        h3 {
+            color: brown;
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            margin-top: 10px;
+        }
+
+        .box {
+            background-color: white;
+            margin: 20px auto;
+            padding: 25px;
+            width: 90%;
+            border: 1px solid gray;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: brown;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Semantic Department</h1>
+
+    <nav>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#timetable">Time Table</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </nav>
+</header>
+
+<main>
+
+<section id="home">
+
+    <h2>Welcome to Our Department</h2>
+    <p>
+        Welcome to the Semantic Department. We focus on developing students
+        in programming, web development and data science.
+    </p>
+
+    <marquee scrollamount="10" direction="left">
+        <h2>Hello MCA Graduates, Welcome to AU</h2>
+    </marquee>
+
+    <div class="cards">
+
+        <article class="card">
+            <h3>Quality Education</h3>
+            <p>Experienced faculty members provide quality education.</p>
+        </article>
+
+        <article class="card">
+            <h3>Career Growth</h3>
+            <p>Students are prepared for careers in the IT industry.</p>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="faculty">
+
+    <h2>Our Faculty</h2>
+
+    <table>
+        <tr>
+            <th>Faculty Name</th>
+            <th>Designation</th>
+            <th>Subject Handled</th>
+        </tr>
+
+        <tr>
+            <td>Dr. Rajesh Kumar</td>
+            <td>Professor</td>
+            <td>Data Science</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Priya Sharma</td>
+            <td>Associate Professor</td>
+            <td>Web Development</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section id="courses">
+
+    <h2>Courses</h2>
+
+    <div class="cards">
+
+        <article class="card">
+            <h3>Semester 1</h3>
+            <p>Programming Fundamentals</p>
+            <p>Web Technologies</p>
+        </article>
+
+        <article class="card">
+            <h3>Semester 2</h3>
+            <p>Java Programming</p>
+            <p>Data Structures</p>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="timetable">
+
+    <h2>Class Timetable</h2>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Java</td>
+            <td>DBMS</td>
+            <td>Web Development</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>DSA</td>
+            <td>Java</td>
+            <td>Computer Networks</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="box">
+
+        <h3>Department Address</h3>
+
+        <p>
+            Semantic Department,<br>
+            School of Computer Applications,<br>
+            Alliance University,<br>
+            Bengaluru, Karnataka, India
+        </p>
+
+        <p><b>Email:</b> department@example.com</p>
+        <p><b>Phone:</b> +91 98765 43210</p>
+
+    </div>
+
+</section>
+
+</main>
+
+</body>
+</html>

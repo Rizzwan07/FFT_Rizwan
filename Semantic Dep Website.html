@@ -1,111 +1,802 @@
 <html>
     <head>
-        <title>Semantic Dep Website</title>
+        <title>Semantic Department Website</title>
+
         <style>
+
             *{
                 margin: 0%;
                 padding: 0%;
             }
-            nav{
-                display: flex;
-                justify-content: space-around;
+
+            body{
+                font-family: Arial, sans-serif;
+                background: rgb(245, 247, 250);
             }
+
             header{
-                background:red;
-                
+                background: rgb(18, 52, 86);
+                color: white;
+                position: fixed;
+                top: 0%;
+                width: 100%;
+                z-index: 10;
+                padding-bottom: 15px;
+                box-shadow: 0px 3px 10px rgb(80, 80, 80);
             }
 
             h1{
                 text-align: center;
-                padding-top: 50px;
+                padding-top: 20px;
+                font-size: 38px;
             }
 
-            li{
-                color: aliceblue;
+            nav{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
                 margin-top: 20px;
-                margin-bottom: 20px;
+            }
+
+            nav li{
                 list-style: none;
-                padding-top: 50px;
+            }
+
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+            nav a:hover{
+                color: rgb(255, 210, 70);
+            }
+
+            main{
+                padding-top: 125px;
+            }
+
+            section{
+                min-height: 650px;
+                padding: 50px;
+                box-sizing: border-box;
+                scroll-margin-top: 125px;
             }
 
             h2{
                 text-align: center;
-                margin-top: 30px;
-                margin-top: 30px;
-                font-size: 60px;
-                text-shadow: 2px 4px 8px rgb(108, 108, 108);
-                font-family:sans-serif;
-
+                font-size: 42px;
+                color: rgb(18, 52, 86);
+                margin-bottom: 30px;
+                text-shadow: 2px 2px 5px rgb(180, 180, 180);
             }
 
             h3{
                 text-align: center;
-                margin-top: 10px;
-                font-size: 60px;
-                text-shadow: 2px 4px 8px rgb(108, 108, 108);
-                font-family:sans-serif;
+                font-size: 28px;
+                color: rgb(18, 52, 86);
+                margin-top: 25px;
+                margin-bottom: 20px;
             }
 
-            img{
-            
-                height: 350px;
-                width: 350px;
-                
+            p{
+                font-size: 17px;
+                line-height: 1.7;
             }
-            
+
+            #home{
+                background: white;
+                text-align: center;
+            }
+
+            #home > p{
+                width: 75%;
+                margin: auto;
+            }
+
+            marquee{
+                margin-top: 25px;
+            }
+
+            .homeimage{
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin-top: 25px;
+                gap: 10px;
+            }
+
+            .homeimage figure{
+                width: 200px;
+            }
+
+            .homeimage img{
+                width: 200px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 2px 3px 8px rgb(150, 150, 150);
+                transition: 0.3s;
+            }
+
+            .homeimage img:hover{
+                transform: scale(1.05);
+            }
+
+            .homeimage figcaption{
+                margin-top: 10px;
+                font-size: 19px;
+                font-weight: bold;
+                color: rgb(18, 52, 86);
+                white-space: nowrap;
+            }
+
+            .homeimage p{
+                font-size: 13px;
+                margin-top: 5px;
+                line-height: 1.3;
+            }
+
+            #about{
+                background: rgb(230, 238, 247);
+            }
+
+            #about article{
+                width: 80%;
+                margin: auto;
+            }
+
+            #about article p{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            aside{
+                background: white;
+                width: 70%;
+                margin: 30px auto;
+                padding: 25px;
+                box-shadow: 2px 3px 10px rgb(170, 170, 170);
+                border-radius: 10px;
+            }
+
+            #faculty{
+                background: white;
+            }
+
+            .faculty{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .facinfo{
+                width: 220px;
+                background: rgb(238, 243, 248);
+                padding: 20px;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 2px 3px 10px rgb(170, 170, 170);
+                transition: 0.3s;
+            }
+
+            .facinfo:hover{
+                transform: scale(1.1);
+            }
+
+            .facinfo img{
+                width: 170px;
+                height: 170px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .facinfo h3{
+                font-size: 21px;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+
+            .facinfo p{
+                font-size: 15px;
+            }
+
+            #courses{
+                background: rgb(230, 238, 247);
+                min-height: 600px;
+            }
+
+            table{
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                background: white;
+            }
+
+            th{
+                background: rgb(18, 52, 86);
+                color: white;
+                padding: 12px;
+                font-size: 17px;
+            }
+
+            td{
+                border: 1px solid rgb(180, 180, 180);
+                padding: 12px;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            tr:hover{
+                background: rgb(235, 241, 247);
+            }
+
+            #courses th,
+            #courses td{
+                padding: 10px;
+            }
+
+            #timetable{
+                background: white;
+            }
+
+            #timetable table{
+                width: 90%;
+                margin-top: 20px;
+            }
+
+            #timetable th,
+            #timetable td{
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            #achievement{
+                background: rgb(230, 238, 247);
+            }
+
+            #achievement article{
+                width: 80%;
+                margin: auto;
+            }
+
+            #achievement article p{
+                text-align: center;
+            }
+
+            #events{
+                background: white;
+            }
+
+            #contact{
+                background: rgb(230, 238, 247);
+                text-align: center;
+                min-height: 500px;
+                padding: 50px;
+                box-sizing: border-box;
+            }
+
+            #contact h2{
+                margin-bottom: 35px;
+            }
+
+            #contact p{
+                margin-top: 18px;
+                font-size: 18px;
+            }
+
+            footer{
+                background: rgb(18, 52, 86);
+                color: white;
+                text-align: center;
+                padding: 30px;
+            }
+
+            footer p{
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            @media (max-width: 600px) {
+
+                #info {
+                width: 100%;
+                padding: 20px;
+                }
+
+                #about {
+                    width: 100%;
+                    padding: 20px;
+                }
+
+                #schedule {
+                    width: 100%;
+                    padding: 20px;
+                }
+
+                #speakers {
+                    width: 100%;
+                    padding: 20px;
+                }
+
+                #reg {
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
         </style>
     </head>
+
     <body>
+
         <header>
-            <h1>Semantic Dep Website</h1>
+
+            <h1>Department of Computer Science</h1>
+
             <nav>
-                <li>Home</li>
-                <li>About Department</li>
-                <li>faculty</li>
-                <li>Courses</li>
-                <li>Time Table</li>
-                <li>Achivement</li>
-                <li>Events</li>
-                <li>Contact</li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About Department</a>
+                </li>
+
+                <li>
+                    <a href="#faculty">Faculty</a>
+                </li>
+
+                <li>
+                    <a href="#courses">Courses</a>
+                </li>
+
+                <li>
+                    <a href="#timetable">Time Table</a>
+                </li>
+
+                <li>
+                    <a href="#achievement">Achievement</a>
+                </li>
+
+                <li>
+                    <a href="#events">Events</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </nav>
+
         </header>
 
-        <!-- header -->
-        <section>
-            <P>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem temporibus neque eveniet consequuntur
-                consequatur dignissimos nisi tenetur veniam at ratione magni, quas rem est, dolorem sapiente fugit cupiditate nesciunt
-                minima obcaecati dolore eaque officiis reprehenderit. Cum eius beatae voluptatem ullam impedit, quod, deserunt ipsam
-                quae omnis excepturi placeat quasi soluta iusto obcaecati consequuntur, autem eum! Consectetur facilis autem tempore
-                doloremque! At consectetur, quae inventore officia nemo, veritatis consequatur corrupti nobis, laboriosam ab
-                perspiciatis. Repellat itaque vel, provident atque iure quibusdam ipsa aperiam, fugiat quisquam esse autem debitis
-                error, quidem doloribus eligendi. Dolor dolorum quisquam reiciendis architecto aliquid dignissimos quia sunt fuga
-                suscipit deleniti cumque corporis blanditiis repudiandae est earum dolores iure eos cum hic odit porro, consequuntur
-                laborum quas ad! Enim laboriosam cum atque perferendis repellat voluptatibus iure omnis? Expedita officia culpa
-                asperiores tempora natus rem et est doloribus, tempore, optio nostrum, rerum necessitatibus quae deleniti sapiente ipsum
-                laboriosam laborum sed quam! Aspernatur autem voluptate obcaecati unde rem repellat, laudantium maxime reprehenderit sed
-                officia corporis cupiditate expedita deserunt sunt ea nesciunt hic dicta adipisci aliquid aut! Omnis adipisci, impedit
-                reprehenderit, doloribus saepe numquam alias recusandae sint sequi animi id aliquam facere ut corporis tempora
-                asperiores, eaque dolor cum eius? Eaque.
-            </P>
-            <marquee>
-                <h2>Welcome to Alliance University </h2>
-            </marquee>
-            <h3>Highlights</h3>
+        <main>
 
-            <article>
-                <img src="img/aiml.jpg" alt="">
-                <img src="img/cybersecurity.webp" alt="">
-                <img src="img/gamedev.jpg" alt="">
-                <img src="img/datascience.webp
-                " alt="">
-            </article>
+            <section id="home">
 
+                <h2>Welcome to Our Department</h2>
 
+                <p>
+                    Welcome to the Department of Computer Science at Alliance University.
+                    Our department focuses on programming, computing technologies,
+                    problem solving and innovation. Students are encouraged to explore
+                    emerging technologies and develop practical skills through projects,
+                    workshops and technical activities.
+                </p>
 
+                <marquee>
+                    <h3>Welcome to Alliance University</h3>
+                </marquee>
 
+                <h3>Technology Highlights</h3>
 
-        </section>
-            
+                <div class="homeimage">
+
+                    <figure>
+
+                        <img src="img/genai.jpg" alt="Generative AI">
+
+                        <figcaption>
+                            Generative AI
+                        </figcaption>
+
+                        <p>
+                            Create intelligent content using modern
+                            artificial intelligence technologies.
+                        </p>
+
+                    </figure>
+
+                    <figure>
+
+                        <img src="img/cybersecurity.webp" alt="Cyber Security">
+
+                        <figcaption>
+                            Cyber Security
+                        </figcaption>
+
+                        <p>
+                            Protect digital systems, networks and
+                            information from cyber threats.
+                        </p>
+
+                    </figure>
+
+                    <figure>
+
+                        <img src="img/gamedev.jpg" alt="Game Development">
+
+                        <figcaption>
+                            Game Development
+                        </figcaption>
+
+                        <p>
+                            Build interactive games using creativity,
+                            programming and design.
+                        </p>
+
+                    </figure>
+
+                    <figure>
+
+                        <img src="img/datascience.webp" alt="Data Science">
+
+                        <figcaption>
+                            Data Science
+                        </figcaption>
+
+                        <p>
+                            Discover useful patterns and insights
+                            from data.
+                        </p>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <section id="about">
+
+                <h2>About Department</h2>
+
+                <article>
+
+                    <p>
+                        The Department of Computer Science provides students with
+                        a strong foundation in computer science and modern
+                        technologies.
+                    </p>
+
+                    <p>
+                        Students learn programming, databases, networking,
+                        artificial intelligence, data science and other
+                        emerging areas of technology.
+                    </p>
+
+                    <p>
+                        The department also encourages students to participate
+                        in workshops, hackathons, seminars and technical
+                        competitions.
+                    </p>
+
+                </article>
+
+                <aside>
+
+                    <h3>Our Vision</h3>
+
+                    <p>
+                        To create skilled, innovative and responsible professionals
+                        who can use technology to solve real-world problems.
+                    </p>
+
+                </aside>
+
+            </section>
+
+            <section id="faculty">
+
+                <h2>Our Faculty</h2>
+
+                <div class="faculty">
+
+                    <div class="facinfo">
+
+                        <img src="img/faculty1.jpg" alt="Faculty Member">
+
+                        <h3>Arjun Mehta</h3>
+
+                        <p>
+                            Professor
+                        </p>
+
+                        <p>
+                            Python programming 
+                        </p>
+
+                    </div>
+
+                    <div class="facinfo">
+
+                        <img src="img/durgasir.png" alt="Faculty Member">
+
+                        <h3>Durga sir</h3>
+
+                        <p>
+                            Associate Professor
+                        </p>
+
+                        <p>
+                            Data Science
+                        </p>
+
+                    </div>
+
+                    <div class="facinfo">
+
+                        <img src="img/raghavsir.png" alt="Faculty Member">
+
+                        <h3>Veera Raghav Kathula</h3>
+
+                        <p>
+                            Assistant Professor
+                        </p>
+
+                        <p>
+                            Frontend Framework
+                        </p>
+
+                    </div>
+
+                    <div class="facinfo">
+
+                        <img src="img/faculty2.jpg" alt="Faculty Member">
+
+                        <h3>Ananya Nair</h3>
+
+                        <p>
+                            Assistant Professor
+                        </p>
+
+                        <p>
+                            Communication
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="courses">
+
+                <h2>Courses Offered</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                    </tr>
+
+                    <tr>
+                        <td>BCA</td>
+                        <td>3 Years</td>
+                        <td>Undergraduate</td>
+                    </tr>
+
+                    <tr>
+                        <td>B.Tech Computer Science</td>
+                        <td>4 Years</td>
+                        <td>Undergraduate</td>
+                    </tr>
+
+                    <tr>
+                        <td>MCA</td>
+                        <td>2 Years</td>
+                        <td>Postgraduate</td>
+                    </tr>
+
+                    <tr>
+                        <td>M.Sc. Computer Science</td>
+                        <td>2 Years</td>
+                        <td>Postgraduate</td>
+                    </tr>
+
+                    <tr>
+                        <td>M.Sc. Data Science</td>
+                        <td>2 Years</td>
+                        <td>Postgraduate</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section id="timetable">
+
+                <h2>Time Table</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Day</th>
+                        <th>9:00 - 10:00</th>
+                        <th>10:00 - 11:00</th>
+                        <th>11:00 - 12:00</th>
+                        <th>1:00 - 2:00</th>
+                    </tr>
+
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>Python</td>
+                        <td>AI</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Python</td>
+                        <td>Database</td>
+                        <td>AI</td>
+                        <td>Networking</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>HTML</td>
+                        <td>Python</td>
+                        <td>Project</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Database</td>
+                        <td>AI</td>
+                        <td>Networking</td>
+                        <td>Project</td>
+                    </tr>
+
+                    <tr>
+                        <td>Friday</td>
+                        <td>AI</td>
+                        <td>Python</td>
+                        <td>Database</td>
+                        <td>Activity</td>
+                    </tr>
+
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Data Science</td>
+                        <td>Cyber Security</td>
+                        <td>Lab</td>
+                        <td>Project</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section id="achievement">
+
+                <h2>Achievements</h2>
+
+                <article>
+
+                    <p>
+                        Our students participate in technical competitions,
+                        hackathons, project exhibitions and other academic
+                        activities.
+                    </p>
+
+                </article>
+
+                <aside>
+
+                    <h3>Student Achievements</h3>
+
+                    <p>
+                        Students participated in university level hackathons.
+                    </p>
+
+                    <p>
+                        Students won prizes in coding competitions.
+                    </p>
+
+                    <p>
+                        Students presented innovative projects at technical
+                        exhibitions.
+                    </p>
+
+                </aside>
+
+            </section>
+
+            <section id="events">
+
+                <h2>Upcoming Events</h2>
+
+                <table>
+
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+
+                    <tr>
+                        <td>Technical Fest</td>
+                        <td>10 March</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI Workshop</td>
+                        <td>18 March</td>
+                        <td>Seminar Hall</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hackathon</td>
+                        <td>25 March</td>
+                        <td>Computer Lab</td>
+                    </tr>
+
+                    <tr>
+                        <td>Project Exhibition</td>
+                        <td>5 April</td>
+                        <td>Innovation Centre</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section id="contact">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Department of Advance Computing
+                </p>
+
+                <p>
+                    Alliance University
+                </p>
+
+                <p>
+                    Bengaluru, Karnataka
+                </p>
+
+                <p>
+                    Email: department@example.com
+                </p>
+
+                <p>
+                    Phone: +91 9999999999
+                </p>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <p>
+                © 2026 Department of Computer Science
+            </p>
+
+            <p>
+                Alliance University
+            </p>
+
+        </footer>
+
     </body>
 </html>

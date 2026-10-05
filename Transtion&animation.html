@@ -2,9 +2,20 @@
     <head>
         <title>Transition&Animation</title>
         <style>
+            .container{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                padding: 20px;
+                border: 5px solid #333;
+                border-radius: 10px;
+                box-shadow: 5px 5px 15px gray;
+                width: 1000px;
+                height: 700px;
+                margin: auto;
+                justify-items: center;
+                
+            }
             button{
-                margin-left: 650px;
-                margin-top: 300px;
                 border: none;
                 width: 100px;
                 height: 50px;
@@ -40,7 +51,7 @@
                 to{
                     transform: scale(0);
                 }
-                form{
+                from{
                     transform: scale(300px);    
                 }
             }
@@ -66,7 +77,6 @@
                 background: rgb(107, 138, 22);
                 width: 100px;
                 height: 100px;
-                margin-left: 300px;
                 animation: change 1s ease 2s alternate infinite;
 
             }
@@ -84,11 +94,11 @@
             }
 
             .ball{
-                margin-left: 300px;
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
                 border-radius: 50%;
+                margin-top: -100px;
                 background-color: rgb(243, 245, 124);
                 animation: bounce 2s  1s alternate infinite;
             }
@@ -103,7 +113,6 @@
             }
 
             .triangle {
-                margin-left: 600px;
                 width: 100px;
                 height: 100px;
                 border-bottom-left-radius: 50px;
@@ -117,7 +126,6 @@
                 }
 
             .rectangle{
-                margin-left: 800px;
                 width: 200px;
                 height: 80px;
                 background: rgb(82, 16, 127);
@@ -134,7 +142,6 @@
             }
 
             .ellipse{
-                margin-left: 1000px;
                 width: 150px;
                 height: 80px;
                 border: 5px solid blue;
@@ -156,8 +163,6 @@
                 width: 100px;
                 height: 100px;
                 background: orange;
-                transform: rotate(45deg);   
-                margin-left: 500px;
                 animation: spinDiamond 3s linear infinite;
             }
 
@@ -176,22 +181,17 @@
         </style>
     </head>
     <body>
-        <button >Action</button>
-        <div class="box"></div>
-        <br><br>
-        <div class="load"> </div>
-        <br><br>
-        <div class="square"></div>
-        <br><br>
-        <div class="ball"></div>
-        <br><br>
-        <div class="triangle"></div>
-        <br><br>
-        <div class="rectangle"></div>
-        <br><br>
-        <div class="ellipse"></div>
-        <br><br>
-        <div class="diamond"></div>
+        <div class="container">
+            <button >Action</button>
+            <div class="box"></div>
+            <div class="load"> </div>
+            <div class="square"></div>
+            <div class="ball"></div>
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="ellipse"></div>
+            <div class="diamond"></div>
+        </div>
 
         
 

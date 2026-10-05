@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudent Result Dashboard</title>
+
+    <style>
+
+        h1{
+            background-color: rgb(127, 185, 255);
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            color: aliceblue;
+            padding-top:10px;
+        }
+
+        form{
+            margin-top:20px;
+            margin: 50px;
+            padding: 20px;
+            background-color: rgb(255, 244, 160);
+            justify-content: center;
+        }
+
+        body{
+            background-image:url("./img/aiml.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h1>Sudent Result Dashboard</h1>
+        <label>Student Name:</label>
+        <input type="text" name="n1" id="i1"> <br><br>
+        <label>Student Reg:</label>
+        <input type="number" name="n2" id="i2"> <br><br>
+        <label>HTML Marks:</label>
+        <input type="number" name="n3" id="i3"> <br><br>
+        <label>CSS Marks:</label>
+        <input type="number" name="n4" id="i4"> <br><br>
+        <label>JS Marks:</label>
+        <input type="number" name="n5" id="i5"> <br><br>
+        <button type="button" onclick="Check()">Result</button>
+        <p id="para"></p>
+    </form>
+
+
+    <script>
+        function Check() {
+            let n1 = document.getElementById("i1").value;
+            let n2 = document.getElementById("i2").value;
+            let n3 = Number(document.getElementById("i3").value);
+            let n4 = Number(document.getElementById("i4").value);
+            let n5 = Number(document.getElementById("i5").value);
+
+            let total = n3 + n4 + n5;
+            let avg = total / 3;
+            let percentage = (total / 300) * 100;
+
+            let grade;
+            if (avg >= 80) {
+                grade = "A";
+            } else if (avg >= 60) {
+                grade = "B";
+            } else if (avg >= 40) {
+                grade = "C";
+            } else if (avg <= 40) {
+                grade = "D";
+            } else {
+                grade = "Fail";
+            }
+
+            let status;
+            if (avg >= 40) {
+                status = "PASS";
+            } else {
+                status = "FAIL";
+            }
+
+            document.getElementById("para").innerHTML =
+                "<h1> Student Details</h1>" + "<br>" +
+                "Student Name:" + n1 + " <br>" +
+                "Student Reg:" + n2 + " <br>" +
+                "Student HTML Marks: " + n3 + " <br>" +
+                "Student CSS Marks:" + n4 + " <br>" +
+                "Student JS Marks:" + n5 + " <br>" +
+                "Total Marks:" + total + " <br>" +
+                "Average Marks:" + avg + " <br>" +
+                "Percentage:" + percentage + " <br>" +
+                "Grade:" + grade + " <br>" +
+                "Status:" + status + " <br>";
+
+
+
+        };
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
