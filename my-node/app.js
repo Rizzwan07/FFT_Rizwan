@@ -21,10 +21,20 @@
 // server.listen(3000);
 // console.log("server is running on http://localhost:3000");
 
-import http from "http";
-const server=http.createServer((req,res)=>{
-    res.end("hellllo guys");
-});
+// import http from "http";
+// const server=http.createServer((req,res)=>{
+//     res.end("hellllo guys");
+// });
 
-server.listen(5000);
-console.log("server is running at http://localhost:5000");
+// server.listen(5000);
+// console.log("server is running at http://localhost:5000");
+
+import http from "http";
+import fs from "fs";
+const server= http.createServer((req,res)=>{
+    fs.readFile("facebook_login.html",(err,data)=>{
+        res.end(data);
+});
+});
+server.listen(3000);
+console.log("http://localhost:3000");

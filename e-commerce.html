@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple E-Commerce Store</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eef5f9;
+}
+
+header {
+  background-color: #2d6a8a;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  margin-top: 15px;
+  background-color: #1f4f68;
+  padding: 12px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #4d91b3;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #c9dce5;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+.category {
+  display: inline-block;
+  border: 1px solid #9fc4d4;
+  padding: 15px;
+  margin: 5px;
+  background-color: #e2f0f6;
+  color: #24566d;
+}
+
+#products {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #b8d1dc;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.product img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.product a {
+  color: black;
+}
+
+#details {
+  border: 1px solid #b8d1dc;
+}
+
+.details-image {
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+}
+
+#cart {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cart-item {
+  width: 180px;
+  padding: 15px;
+  border: 1px solid #b8d1dc;
+  background-color: #eaf4f8;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #2d6a8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1f4f68;
+}
+</style>
+</head>
+<body>
+
+<header id="home">
+  <h1>Simple Product Store</h1>
+  <p>Good products at simple prices</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#product-list">Products</a>
+    <a href="#details">Product Details</a>
+    <a href="#cart-section">Cart</a>
+  </nav>
+</header>
+
+<main>
+  <section id="categories">
+    <h2>Product Categories</h2>
+    <div class="category">Laptops</div>
+    <div class="category">Mobile Phones</div>
+    <div class="category">Headphones</div>
+    <div class="category">Accessories</div>
+  </section>
+
+  <section id="product-list">
+    <h2>Product List</h2>
+    <div id="products">
+      <div class="product">
+        <img src="img/laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Basic laptop for work</p>
+        <p>Price: ₹55000</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="img/mobile.jpg" alt="Mobile Phone">
+        <h3>Mobile Phone</h3>
+        <p>Smartphone with a good camera</p>
+        <p>Price: ₹25000</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="img/headphones.webp" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Simple wired headphones</p>
+        <p>Price: ₹1500</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="img/keyboard.webp" alt="Keyboard">
+        <h3>Keyboard</h3>
+        <p>Mechanical keyboard for typing</p>
+        <p>Price: ₹1200</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="img/mouse.jpg" alt="Mouse">
+        <h3>Wireless Mouse</h3>
+        <p>Small mouse for everyday use</p>
+        <p>Price: ₹700</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="img/keyboard.webp" alt="Gaming Keyboard">
+        <h3>Gaming Keyboard</h3>
+        <p>Keyboard with colourful keys</p>
+        <p>Price: ₹1800</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <h2>Product Details</h2>
+    <img class="details-image" src="img/laptop.jpg" alt="Laptop">
+    <h3>Laptop</h3>
+    <p>This laptop is useful for school work, office work and browsing.</p>
+    <p>Price: ₹55000</p>
+    <button>Add to Cart</button>
+  </section>
+
+  <section id="cart-section">
+    <h2>Simple Cart</h2>
+    <div id="cart">
+      <div class="cart-item">
+        <h3>Laptop</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹55000</p>
+      </div>
+
+      <div class="cart-item">
+        <h3>Headphones</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹1500</p>
+      </div>
+    </div>
+    <h3>Total: ₹56500</h3>
+  </section>
+</main>
+
+</body>
+</html>

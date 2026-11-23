@@ -11,51 +11,139 @@
         h1{
             background-color: rgb(127, 185, 255);
             width: 100%;
-            height: 100px;
+            height: 60px;
             text-align: center;
             color: aliceblue;
-            padding-top:10px;
+            padding-top: 10px;
+            margin: 0px;
         }
 
         form{
-            margin-top:20px;
-            margin: 50px;
-            padding: 20px;
-            background-color: rgb(255, 244, 160);
-            justify-content: center;
+            width: 43%;
+            margin: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
         }
 
         body{
-            background-image:url("./img/aiml.jpg");
+            background-image: url("./img/bgimg.avif");
             background-size: cover;
             background-repeat: no-repeat;
+            margin: 0px;
         }
 
-       
+        input{
+            width: 200px;
+            padding: 8px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        button{
+            padding: 8px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+        select{
+            padding: 8px;
+            margin-left: 10px;
+        }
+
+        #para{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        #searchResult{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        #filterResult{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        #summary{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin-top: 15px;
+        }
+
     </style>
 </head>
 
 <body>
 
     <form>
+
         <h1>Sudent Result Dashboard</h1>
+
         <label>Student Name:</label>
         <input type="text" name="n1" id="i1"> <br><br>
+
         <label>Student Reg:</label>
         <input type="number" name="n2" id="i2"> <br><br>
+
         <label>HTML Marks:</label>
         <input type="number" name="n3" id="i3"> <br><br>
+
         <label>CSS Marks:</label>
         <input type="number" name="n4" id="i4"> <br><br>
+
         <label>JS Marks:</label>
         <input type="number" name="n5" id="i5"> <br><br>
+
         <button type="button" onclick="Check()">Result</button>
+
         <p id="para"></p>
+
+    </form>
+
+
+    <form>
+
+        <h2>Search Student</h2>
+
+        <label>Search Student:</label>
+        <input type="text" id="search">
+
+        <button type="button" onclick="SearchStudent()">Search</button>
+
+        <p id="searchResult"></p>
+
+
+        <h2>Filter Student</h2>
+
+        <label>Filter Result:</label>
+
+        <select id="filter">
+            <option value="ALL">All</option>
+            <option value="PASS">PASS</option>
+            <option value="FAIL">FAIL</option>
+        </select>
+
+        <button type="button" onclick="FilterStudent()">Filter</button>
+
+        <p id="filterResult"></p>
+
+
+        <h2>Performance Summary</h2>
+
+        <p id="summary"></p>
+
     </form>
 
 
     <script>
+
         function Check() {
+
             let n1 = document.getElementById("i1").value;
             let n2 = document.getElementById("i2").value;
             let n3 = Number(document.getElementById("i3").value);
@@ -67,6 +155,7 @@
             let percentage = (total / 300) * 100;
 
             let grade;
+
             if (avg >= 80) {
                 grade = "A";
             } else if (avg >= 60) {
@@ -80,6 +169,7 @@
             }
 
             let status;
+
             if (avg >= 40) {
                 status = "PASS";
             } else {
@@ -99,16 +189,143 @@
                 "Grade:" + grade + " <br>" +
                 "Status:" + status + " <br>";
 
+        }
 
 
-        };
+        let students = [
+            {
+                name: "Rizwan",
+                reg: "101",
+                html: 85,
+                css: 80,
+                js: 90,
+                percentage: 85,
+                status: "PASS"
+            },
+
+            {
+                name: "Rahul",
+                reg: "102",
+                html: 70,
+                css: 65,
+                js: 75,
+                percentage: 70,
+                status: "PASS"
+            },
+
+            {
+                name: "Aman",
+                reg: "103",
+                html: 45,
+                css: 50,
+                js: 40,
+                percentage: 45,
+                status: "PASS"
+            },
+
+            {
+                name: "Priya",
+                reg: "104",
+                html: 30,
+                css: 35,
+                js: 25,
+                percentage: 30,
+                status: "FAIL"
+            },
+
+            {
+                name: "Neha",
+                reg: "105",
+                html: 90,
+                css: 85,
+                js: 88,
+                percentage: 87.6,
+                status: "PASS"
+            }
+        ];
 
 
+        function SearchStudent() {
+
+            let search = document.getElementById("search").value.toLowerCase();
+
+            let result = "";
+
+            for (let i = 0; i < students.length; i++) {
+
+                if (students[i].name.toLowerCase() == search ||
+                    students[i].reg == search) {
+
+                    result =
+                        "Student Name: " + students[i].name + "<br>" +
+                        "Student Reg: " + students[i].reg + "<br>" +
+                        "HTML Marks: " + students[i].html + "<br>" +
+                        "CSS Marks: " + students[i].css + "<br>" +
+                        "JS Marks: " + students[i].js + "<br>" +
+                        "Percentage: " + students[i].percentage + "%<br>" +
+                        "Status: " + students[i].status;
+
+                    break;
+                }
+            }
+
+            if (result == "") {
+                result = "Student not found";
+            }
+
+            document.getElementById("searchResult").innerHTML = result;
+
+        }
 
 
+        function FilterStudent() {
+
+            let filter = document.getElementById("filter").value;
+
+            let result = "";
+
+            for (let i = 0; i < students.length; i++) {
+
+                if (filter == "ALL" || students[i].status == filter) {
+
+                    result = result +
+                        students[i].name + " - " +
+                        students[i].reg + " - " +
+                        students[i].status + "<br>";
+                }
+            }
+
+            document.getElementById("filterResult").innerHTML = result;
+
+        }
+
+
+        let totalStudents = students.length;
+        let passedStudents = 0;
+        let failedStudents = 0;
+        let totalPercentage = 0;
+
+        for (let i = 0; i < students.length; i++) {
+
+            totalPercentage = totalPercentage + students[i].percentage;
+
+            if (students[i].status == "PASS") {
+                passedStudents++;
+            } else {
+                failedStudents++;
+            }
+        }
+
+        let averagePercentage = totalPercentage / totalStudents;
+
+
+        document.getElementById("summary").innerHTML =
+            "Total Students: " + totalStudents + "<br>" +
+            "Passed Students: " + passedStudents + "<br>" +
+            "Failed Students: " + failedStudents + "<br>" +
+            "Average Percentage: " + averagePercentage.toFixed(2) + "%";
 
     </script>
-
 
 </body>
 

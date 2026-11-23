@@ -1,0 +1,166 @@
+.app {
+  width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #1d4ed8;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  padding: 9px;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+  color: #1e3a8a;
+  background-color: #f8fbff;
+}
+
+.select {
+  padding: 9px;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  color: #1e3a8a;
+  background-color: #f8fbff;
+  font-size: 14px;
+}
+
+.add {
+  padding: 9px 14px;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add:hover {
+  background-color: #1e40af;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.filters {
+  display: flex;
+  gap: 5px;
+}
+
+.filter {
+  padding: 7px 10px;
+  color: white;
+  background-color: #60a5fa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter:hover {
+  background-color: #2563eb;
+}
+
+.list {
+  padding: 0;
+  margin-top: 15px;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.completed {
+  color: #777777;
+  text-decoration: line-through;
+}
+
+.priority {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.low {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.medium {
+  color: #854d0e;
+  background-color: #fef9c3;
+}
+
+.high {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+.submit {
+  display: flex;
+  gap: 5px;
+}
+
+.complete {
+  padding: 9px 14px;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.complete:hover {
+  background-color: #1e40af;
+}
+
+.delete {
+  padding: 9px 14px;
+  color: white;
+  background-color: #dc2626;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete:hover {
+  background-color: #b91c1c;
+}
+
+.empty {
+  padding: 20px 0;
+  color: #777777;
+  text-align: center;
+}
